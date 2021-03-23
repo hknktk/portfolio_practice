@@ -163,7 +163,7 @@ body {
 .header h1 {
   position: absolute;
   left: 10%;
-  top: 10%;
+  top: -5%;
   font-size: 4rem;
   color: #fff;
   font-weight: 800;
@@ -172,16 +172,31 @@ body {
 
 .header p {
   position: absolute;
-  bottom: -32px;
+  top: -32px;
   right: 10px;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 500;
   padding: 8px 40px 8px 8px;
   padding-top: 56px;
   font-style: italic;
   color: #efe5cb;
   color: #fff;
-  border: 2px solid #efe5cb;
+  letter-spacing: 1px;
+}
+
+.header .button {
+  position: absolute;
+  bottom: -5%;
+  left: 75%;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #d43e3e;
+  color: #fff;
+  font-size: 1.5rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .container {
@@ -218,6 +233,7 @@ body {
 .container .block1 .box {
   width: 95%;
   margin: 0 auto;
+  padding-top: 24px;
   min-height: 30vh;
 }
 
