@@ -492,4 +492,9 @@ body {
 .block3 table td.second_date {
   font-weight: 700;
 }
+
+.block3 table td.second_date span {
+  color: #949494;
+  font-size: 1.6rem;
+}
 /*# sourceMappingURL=style.css.map */
