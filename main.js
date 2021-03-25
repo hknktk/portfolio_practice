@@ -1,7 +1,5 @@
 
 
-
-
 {
   const $menuButton = document.getElementById("menuButton");
   const $list = document.getElementById("list");
@@ -21,7 +19,7 @@
     for (let i = 0; i < targetElement.length; i++) {
       const getElementDistance =
         targetElement[i].getBoundingClientRect().top +
-        targetElement[i].clientHeight * 0.8;
+        targetElement[i].clientHeight * 3;
       if (window.innerHeight > getElementDistance) {
         targetElement[i].classList.add("show");
       }

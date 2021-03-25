@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <link rel="stylesheet" href="style.css">
   <title>grid practice</title>
 </head>
@@ -26,7 +27,7 @@
 
 
   <div class="header">
-    <h1>KUDOH KEITA</h1>
+    <h1>KKKKK KKKKK</h1>
     <p>
       Portfolio Site
     </p>
@@ -39,13 +40,13 @@
 
   <div class="container">
 
- 
-
       <div class="block block1" id="prof">
         <div class="title">
           <h2>プロフィール</h2>
         </div>
+
         <div class="box" id="button_accept">
+        
 
           <div class="photo">
             <img src="./img/prof.png" alt="">
@@ -56,29 +57,29 @@
 
             <tr>
               <td class="first_date">名前</td>
-              <td class="second_date">工藤恵太(くどうけいた)</td>
+              <td class="second_date js-target">苗字名前(ふりがな)</td>
             </tr>
 
             <tr>
               <td class="first_date">生年月日</td>
-              <td class="second_date">2000/02/03</td>
+              <td class="second_date js-target">0000/00/00</td>
             </tr>
 
             <tr>
               <td class="first_date">最終学歴</td>
-              <td class="second_date">学習院大学経済学部経済学科卒</td>
+              <td class="second_date js-target">○○○大学経済学部経済学科卒</td>
             </tr>
 
             <tr>
               <td class="first_date">スキル</td>
-              <td class="second_date">HTML、CSS、Sass、JavaScript、jQuery、Vue.js、PHP
+              <td class="second_date js-target">HTML、CSS、Sass、JavaScript、jQuery、Vue.js、PHP
 
               </td>
             </tr>
 
             <tr>
               <td class="first_date">座右の銘</td>
-              <td class="second_date">疑いは知の始まりである。
+              <td class="second_date js-target">疑いは知の始まりである。
               </td>
             </tr>
 
@@ -94,6 +95,7 @@
         </div>
 
         <div class="box">
+      
           <div class="box_inner">
             <img src="./img/work.png" alt="">
             <h3>作品１</h3>
@@ -121,13 +123,39 @@
         </div>
 
         <div class="box">
-          
 
-         
+          <table>
+
+            <tr>
+              <td class="first_date">部活動経験</td>
+              <td class="second_date js-target">小学1年から高校３年まで野球部</td>
+            </tr>
+
+            <tr>
+              <td class="first_date">趣味</td>
+              <td class="second_date js-target">サッカー観戦</td>
+            </tr>
+
+            <tr>
+              <td class="first_date">特技</td>
+              <td class="second_date js-target">気配り</td>
+            </tr>
+
+            <tr>
+              <td class="first_date">目標</td>
+              <td class="second_date js-target">手に職をつけ、社会に必要とされる存在になる。</td>
+            </tr>
+
+            
+
+          </table>
+          
 
         </div>
 
   </div>
+
+  <div id="page-top"><i class="fa fa-chevron-up up_arrow"></i></div>
 
   <script src="main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -143,6 +171,32 @@ $(function(){
   
   });
 });
+
+
+$(function () {
+        // TOPに戻るボタン
+        var topBtn = $("#page-top");
+        topBtn.hide();
+        //スクロールが100に達したらボタン表示
+        $(window).scroll(function () {
+          var w = $(window).width();
+          if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+          } else {
+            topBtn.fadeOut();
+          }
+        });
+        //スムーススクロールでページトップへ
+        topBtn.click(function () {
+          $("body,html").animate(
+            {
+              scrollTop: 0,
+            },
+            500
+          );
+          return false;
+        });
+      });
 
   </script>
 </body>
