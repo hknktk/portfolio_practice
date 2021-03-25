@@ -22,7 +22,7 @@ html {
 body {
   overflow-x: hidden;
   background-color: #c1d1e0;
-  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 
 .menuButton {
@@ -90,8 +90,8 @@ body {
   z-index: 2;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   opacity: 0;
   visibility: hidden;
 }
@@ -101,16 +101,16 @@ body {
   visibility: visible;
   -webkit-transform: none;
           transform: none;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .list.active li {
   opacity: 1;
   -webkit-transform: none;
           transform: none;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .list ul {
@@ -133,13 +133,13 @@ body {
 }
 
 .list ul li:nth-child(2) {
-  -webkit-transition: 1s .2s;
-  transition: 1s .2s;
+  -webkit-transition: 1s 0.2s;
+  transition: 1s 0.2s;
 }
 
 .list ul li:nth-child(3) {
-  -webkit-transition: 1s .4s;
-  transition: 1s .4s;
+  -webkit-transition: 1s 0.4s;
+  transition: 1s 0.4s;
 }
 
 .list ul li a {
@@ -162,8 +162,8 @@ body {
 
 .header h1 {
   position: absolute;
+  top: 5%;
   left: 10%;
-  top: -5%;
   font-size: 4rem;
   color: #fff;
   font-weight: 800;
@@ -172,8 +172,8 @@ body {
 
 .header p {
   position: absolute;
-  top: -32px;
-  right: 10px;
+  top: 8%;
+  left: 20%;
   font-size: 3.5rem;
   font-weight: 500;
   padding: 8px 40px 8px 8px;
@@ -298,16 +298,45 @@ body {
   display: block;
 }
 
+.container .block1 .box table tr:nth-of-type(odd) .second_date.js-target {
+  opacity: 0;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.container .block1 .box table tr:nth-of-type(odd) .second_date.js-target.show {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.container .block1 .box table tr:nth-of-type(even) .second_date.js-target {
+  opacity: 0;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.container .block1 .box table tr:nth-of-type(even) .second_date.js-target.show {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
 .container .block1 .box table td {
   display: block;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: center;
+  line-height: 1.5;
 }
 
 .container .block1 .box table td.first_date {
   position: relative;
   color: #7a7a7a;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-bottom: 8px;
   margin-bottom: 8px;
   font-weight: 500;
@@ -328,20 +357,6 @@ body {
 
 .container .block1 .box table td.second_date {
   font-weight: 700;
-}
-
-.container .block1 .box table td.js-target {
-  opacity: 0;
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-}
-
-.container .block1 .box table td.js-target.show {
-  opacity: 1;
-  -webkit-transform: none;
-          transform: none;
 }
 
 .container .block2 .box {
@@ -417,16 +432,45 @@ body {
   display: block;
 }
 
+.block3 table tr:nth-of-type(odd) .second_date.js-target {
+  opacity: 0;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.block3 table tr:nth-of-type(odd) .second_date.js-target.show {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.block3 table tr:nth-of-type(even) .second_date.js-target {
+  opacity: 0;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.block3 table tr:nth-of-type(even) .second_date.js-target.show {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
 .block3 table td {
   display: block;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: center;
+  line-height: 1.5;
 }
 
 .block3 table td.first_date {
   position: relative;
   color: #7a7a7a;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-bottom: 8px;
   margin-bottom: 8px;
   font-weight: 500;
@@ -447,19 +491,5 @@ body {
 
 .block3 table td.second_date {
   font-weight: 700;
-}
-
-.block3 table td.js-target {
-  opacity: 0;
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-}
-
-.block3 table td.js-target.show {
-  opacity: 1;
-  -webkit-transform: none;
-          transform: none;
 }
 /*# sourceMappingURL=style.css.map */
