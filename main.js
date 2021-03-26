@@ -19,12 +19,20 @@
     for (let i = 0; i < targetElement.length; i++) {
       const getElementDistance =
         targetElement[i].getBoundingClientRect().top +
-        targetElement[i].clientHeight * 2;
+        targetElement[i].clientHeight * 1.5;
       if (window.innerHeight > getElementDistance) {
         targetElement[i].classList.add("show");
       }
     }
   });
+
+  window.addEventListener("scroll",()=>{
+    $list.classList.toggle('sticky',window.scrollY > 0);
+   })
+ 
+   function toggle(){
+     $list.classList.toggle('active');
+   }
 }
 
 {

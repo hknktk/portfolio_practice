@@ -18,6 +18,7 @@ html {
   overflow-x: hidden;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 64px;
 }
 
 body {
@@ -33,7 +34,13 @@ body {
   width: 56px;
   height: 48px;
   background-color: #333;
-  z-index: 3;
+  z-index: 10;
+}
+
+@media screen and (min-width: 600px) {
+  .menuButton {
+    display: none;
+  }
 }
 
 .menuButton.active {
@@ -88,13 +95,31 @@ body {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
-  z-index: 2;
+  z-index: 5;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
   visibility: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  .list {
+    height: 64px;
+    opacity: 1;
+    visibility: visible;
+    padding: 15px;
+    background: #c1d1e0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .list.sticky {
+    height: 40px;
+    padding: 10px 15px;
+    background: #e23434;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 .list.active {
@@ -119,6 +144,21 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 600px) {
+  .list ul {
+    position: absolute;
+    right: 10%;
+    width: 60%;
+    padding-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .list ul li {
   margin-bottom: 32px;
   -webkit-transform: scale(0.2);
@@ -126,6 +166,15 @@ body {
   -webkit-transform-origin: center;
           transform-origin: center;
   opacity: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .list ul li {
+    margin: 0;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .list ul li:nth-child(1) {
@@ -148,17 +197,31 @@ body {
   font-size: 3rem;
 }
 
+@media screen and (min-width: 600px) {
+  .list ul li a {
+    font-size: 2rem;
+  }
+}
+
 .header {
   position: relative;
   top: 48px;
   width: 100%;
-  height: 350px;
-  margin: 0 auto;
+  height: 500px;
   margin-bottom: 200px;
   background: url(./img/bg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    top: 64px;
+    left: 20%;
+    width: 80%;
+    margin-bottom: 100px;
+  }
 }
 
 .header h1 {
@@ -198,6 +261,18 @@ body {
   font-size: 1.5rem;
   -webkit-animation: btn 2s;
           animation: btn 2s;
+}
+
+@media screen and (min-width: 600px) {
+  .header .button {
+    bottom: 10%;
+    left: -20%;
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }
 
 @-webkit-keyframes btn {
@@ -248,11 +323,23 @@ body {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 600px) {
+  .container .title {
+    height: 400px;
+  }
+}
+
 .container .title h2 {
   color: #fff;
   font-size: 4rem;
   font-weight: 700;
   z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .container .title h2 {
+    font-size: 6rem;
+  }
 }
 
 .container .title h3 {
@@ -268,6 +355,12 @@ body {
   line-height: 1.4;
 }
 
+@media screen and (min-width: 600px) {
+  .container .title h3 {
+    font-size: 4rem;
+  }
+}
+
 .container .title h3::before {
   content: "-";
   font-size: 3rem;
@@ -275,6 +368,12 @@ body {
 
 .container .block {
   min-height: 50vh;
+}
+
+@media screen and (min-width: 600px) {
+  .container .block {
+    padding-top: -50px;
+  }
 }
 
 .container .block .box {
@@ -286,6 +385,13 @@ body {
   margin: 0 auto;
   padding-top: 24px;
   min-height: 30vh;
+}
+
+@media screen and (min-width: 600px) {
+  .container .block1 .box {
+    padding-top: 50px;
+    margin-top: -60px;
+  }
 }
 
 .container .block1 .box .photo {
@@ -308,6 +414,13 @@ body {
   height: 170px;
   border-radius: 50%;
   border: 3px solid #efe5cb;
+}
+
+@media screen and (min-width: 600px) {
+  .container .block1 .box .photo img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .container .block1 .box table {
@@ -354,6 +467,12 @@ body {
   line-height: 1.5;
 }
 
+@media screen and (min-width: 600px) {
+  .container .block1 .box table td {
+    font-size: 3rem;
+  }
+}
+
 .container .block1 .box table td.first_date {
   position: relative;
   color: #7a7a7a;
@@ -361,6 +480,12 @@ body {
   padding-bottom: 8px;
   margin-bottom: 8px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 600px) {
+  .container .block1 .box table td.first_date {
+    font-size: 2rem;
+  }
 }
 
 .container .block1 .box table td.first_date::after {
@@ -488,6 +613,12 @@ body {
   line-height: 1.5;
 }
 
+@media screen and (min-width: 600px) {
+  .block3 table td {
+    font-size: 3rem;
+  }
+}
+
 .block3 table td.first_date {
   position: relative;
   color: #7a7a7a;
@@ -495,6 +626,12 @@ body {
   padding-bottom: 8px;
   margin-bottom: 8px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 600px) {
+  .block3 table td.first_date {
+    font-size: 2rem;
+  }
 }
 
 .block3 table td.first_date::after {
